@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Inter";
+    src: local("Inter"), url(./assets/fonts/Inter_28pt-Regular.ttf) format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    min-height: 100vh;
+    background: radial-gradient(circle, #BBC3CF, #E7F0FF);
+}
