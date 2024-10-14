@@ -1,6 +1,15 @@
 .display {
+    display: grid;
+    place-items: center;
     height: 65%;
-    width: 100%;
+    aspect-ratio: 1;
     color: #fff;
     background-color: #195BA5;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.currentTemp {
+    font-size: 3.8rem;
+    letter-spacing: 3.5px;
 }
