@@ -1,9 +1,19 @@
 .button {
-    width: 75px;
+    width: 90px;
     aspect-ratio: 1;
     color: #fff;
     background-color: #5D5D5D;
     border: 3.75px solid #fff;
     border-radius: 50%;
     font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #4F4F4F;
+    border-color: #E3E3E3;
+}
+
+.button:active {
+    background-color: #444;
 }
