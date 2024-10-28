@@ -4,7 +4,7 @@ import TempDisplay from "./components/TempDisplay/TempDisplay";
 import ButtonList from "./components/ButtonList/ButtonList";
 
 const App = () => {
-  const [currentTemp, setTemp] = useState(3);
+  const [currentTemp, setTemp] = useState(10);
 
   const increaseTemp = () => {
     setTemp(currentTemp + 1);
