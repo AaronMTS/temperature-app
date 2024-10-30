@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { css, right } from 'glamor';
 import styles from "./App.module.css";
 import TempDisplay from "./components/TempDisplay/TempDisplay";
 import ButtonList from "./components/ButtonList/ButtonList";
+import ResetButton from "./components/Buttons/ResetButton";
 
 const App = () => {
+  const topOffset = "40px";
+  const rightOffset = "30px";
+  const rButtonSize = "40px";
   const [currentTemp, setTemp] = useState(10);
 
   const increaseTemp = () => {
@@ -70,8 +75,23 @@ const App = () => {
     return `#${red.toString().length < 2 ? `0${red}` : red}${green.toString().length < 2 ? `0${green}` : green}${blue.toString().length < 2 ? `0${blue}` : blue}`;
   }
 
+  let beforeRule = css({
+    '::before': {
+      content: '""',
+      position: 'absolute',
+      zIndex: '-1',
+      top: topOffset,
+      right: rightOffset,
+      width: rButtonSize,
+      height: rButtonSize,
+      borderRadius: '100%',
+      boxShadow: `0 0 0 440px ${calculateBgColor(currentTemp)}`
+    }
+  });
+
   return (
-    <main className={styles.container} style={{backgroundColor: calculateBgColor(currentTemp)}}>
+    <main className={`${styles.container} ${beforeRule}`}>
+      <ResetButton top={topOffset} right={rightOffset} size={rButtonSize}/>
       <TempDisplay temp={currentTemp}/>
       <ButtonList incHandler={increaseTemp} decHandler={decreaseTemp}/>
     </main>

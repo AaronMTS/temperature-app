@@ -1,0 +1,23 @@
+.button {
+    aspect-ratio: 1;
+    padding: 8px;
+    border: 1px solid #111;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button > svg {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
