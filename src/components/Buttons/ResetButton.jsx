@@ -3,7 +3,7 @@ import styles from "./ResetButton.module.css";
 
 const ResetButton = (props) => {
   return (
-    <div className={styles.button} style={{position: 'absolute', top: props.top, right: props.right, height: props.size}}>
+    <div onClick={props.clickHandler} className={styles.button} style={{position: 'absolute', top: props.top, right: props.right, height: props.size}}>
       <svg
         fill="#111"
         width="100px"

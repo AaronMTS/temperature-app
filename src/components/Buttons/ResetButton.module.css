@@ -1,7 +1,7 @@
 .button {
     aspect-ratio: 1;
     padding: 8px;
-    border: 1px solid #111;
+    border: 2px solid #111;
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;

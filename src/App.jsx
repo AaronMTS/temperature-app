@@ -19,6 +19,10 @@ const App = () => {
     setTemp(currentTemp - 1);
   }
 
+  const resetTemp = () => {
+    setTemp(10);
+  }
+
   const decToHex = num => {
     let remainder;
     const hexObj = {
@@ -91,7 +95,7 @@ const App = () => {
 
   return (
     <main className={`${styles.container} ${beforeRule}`}>
-      <ResetButton top={topOffset} right={rightOffset} size={rButtonSize}/>
+      <ResetButton top={topOffset} right={rightOffset} size={rButtonSize} clickHandler={resetTemp}/>
       <TempDisplay temp={currentTemp}/>
       <ButtonList incHandler={increaseTemp} decHandler={decreaseTemp}/>
     </main>
