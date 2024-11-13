@@ -105,8 +105,6 @@ const App = () => {
       borderRadius: '100%',
       boxShadow: `0 0 0 440px ${calculateBgColor(currentTemp)}`,
       transition: 'box-shadow 0.4s',
-      boxShadow: `0 0 0 440px ${calculateBgColor(currentTemp)}`,
-      transition: 'box-shadow 0.4s',
     }
   });
 
