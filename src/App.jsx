@@ -20,7 +20,21 @@ const App = () => {
   }
 
   const resetTemp = () => {
-    setTemp(10);
+    let startTemp = currentTemp;
+    let id = setInterval(frame, 75);
+    function frame() {
+      if (startTemp === 10) {
+        clearInterval(id);
+      }
+      else if (startTemp > 10) {
+        setTemp(startTemp - 1);
+        startTemp--;
+      }
+      else {
+        setTemp(startTemp + 1);
+        startTemp++;
+      }
+    }
   }
 
   const decToHex = num => {
@@ -89,7 +103,8 @@ const App = () => {
       width: rButtonSize,
       height: rButtonSize,
       borderRadius: '100%',
-      boxShadow: `0 0 0 440px ${calculateBgColor(currentTemp)}`
+      boxShadow: `0 0 0 440px ${calculateBgColor(currentTemp)}`,
+      transition: 'box-shadow 0.4s',
     }
   });
 
